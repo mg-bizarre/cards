@@ -1,0 +1,90 @@
+/* MOBILE 592px*/
+@media screen and (max-width: 37rem) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .btn {
+    margin-bottom: 20px;
+  }
+}
+/* DESKTOP 768px*/
+@media screen and (min-width: 48rem) {
+}
+
+.header {
+  min-height: 50px;
+  width: 100%;
+  background-color: var(--primary);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px var(--horizontalPadding);
+}
+
+.link {
+  padding-right: var(--horizontalPadding);
+  height: 100%;
+  cursor: pointer;
+}
+.link:hover :global(.homeHover) {
+  fill: var(--white);
+  stroke: var(--white);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.btn {
+  font-size: 1.125rem;
+  max-width: 35%;
+  min-width: 16.875rem;
+  line-height: 20px;
+  height: 50px;
+  border-radius: 30px;
+  transition: all 0.3s;
+  background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--hover) solid 2px;
+}
+
+.btnText {
+  padding-right: 10px;
+}
+
+.btn:hover {
+  background-color: var(--hover);
+  color: var(--white);
+}
+.btn:hover svg {
+  fill: var(--white);
+  stroke: var(--white);
+}
+
+.form {
+  max-width: 16.875rem;
+  border-radius: 30px;
+  background-color: var(--white);
+  padding: 10px;
+  height: 50px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--hover) solid 2px;
+}
+.input {
+  width: 100%;
+  font-size: 1.125rem;
+  line-height: 20px;
+  color: var(--black);
+  font-family: 'Arial';
+}

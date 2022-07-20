@@ -1,0 +1,43 @@
+.posts {
+  padding: 40px 0;
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+/* DESKTOP 1440px*/
+@media screen and (min-width: 90rem) {
+  .posts {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+/* LAPTOP 1439px*/
+@media screen and (max-width: 89.938rem) {
+  .posts {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+/* TABLET 1024px*/
+@media screen and (max-width: 64rem) {
+  .posts {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/* MOBILE 767px*/
+@media screen and (max-width: 47.938rem) {
+  .posts {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: 31.25rem) {
+  .posts {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+  }
+}
+
+.notFound {
+  font-size: 1.25rem;
+  color: var(--black);
+}

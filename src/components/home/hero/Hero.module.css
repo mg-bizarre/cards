@@ -1,0 +1,70 @@
+/* MOBILE 767px*/
+@media screen and (max-width: 47.938rem) {
+  .hero {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .btn {
+    margin-bottom: 15px;
+  }
+}
+/* DESKTOP 768px*/
+@media screen and (min-width: 48rem) {
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.btn {
+  font-size: 1.125rem;
+  max-width: 35%;
+  min-width: 16.875rem;
+  line-height: 20px;
+  padding: 10px;
+  border-radius: 30px;
+  transition: all 0.3s;
+  background-color: var(--primary);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnText {
+  padding-right: 10px;
+}
+
+.btn:hover {
+  background-color: var(--hover);
+  color: var(--white);
+}
+.btn:hover svg {
+  fill: var(--white);
+  stroke: var(--white);
+}
+.form {
+  max-width: 16.875rem;
+  border-radius: 30px;
+  background-color: var(--white);
+  padding: 10px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--primary) solid 2px;
+}
+.input {
+  width: 100%;
+  font-size: 1.125rem;
+  line-height: 20px;
+  color: var(--black);
+  font-family: 'Arial';
+}

@@ -1,0 +1,13 @@
+@import url(./normalize.css);
+@import url(./variables.css);
+@import url(./global.css);
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: var(--white);
+}

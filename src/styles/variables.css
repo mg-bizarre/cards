@@ -1,0 +1,30 @@
+:root {
+  --white: #ffffff;
+  --black: #000;
+  --primary: #ab9ae6;
+  --secondary: #5f5f5f;
+  --hover: #7355d9;
+  --shadow1: #ab9ae6;
+  --shadow2: #99e5aa;
+  --shadow3: #e599d5;
+  --shadow4: #c9df77;
+}
+
+/*DESKTOP 768px*/
+@media screen and (min-width: 48rem) {
+  :root {
+    --horizontalPadding: 70px;
+  }
+}
+/* TABLET 1024px*/
+@media screen and (max-width: 64rem) {
+  :root {
+    --horizontalPadding: 40px;
+  }
+}
+/*MOBILE 767px*/
+@media screen and (max-width: 47.938rem) {
+  :root {
+    --horizontalPadding: 20px;
+  }
+}
