@@ -1,0 +1,51 @@
+/* MOBILE 767px*/
+@media screen and (max-width: 47.938rem) {
+  .post {
+    width: 100%;
+    padding: 30px var(--horizontalPadding);
+  }
+}
+/* DESKTOP 768px*/
+@media screen and (min-width: 48rem) {
+  .post {
+    width: 100%;
+    padding: 60px var(--horizontalPadding);
+  }
+}
+
+.title {
+  color: var(--black);
+  font-size: 2rem;
+  line-height: 1;
+  transition: all 0.3s;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+.titleBlock::first-letter {
+  display: block;
+  font-size: 130%;
+  text-transform: uppercase;
+  color: var(--hover);
+}
+
+.user {
+  color: var(--primary);
+  font-size: 1.25rem;
+  padding-top: 0.625rem;
+}
+
+.body {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  padding-top: 2rem;
+  color: var(--secondary);
+  font-size: 1.25rem;
+  line-height: 1;
+  text-overflow: ellipsis;
+}

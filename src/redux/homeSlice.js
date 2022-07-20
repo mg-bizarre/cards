@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-export const fetchPosts = createAsyncThunk('home/fetchPosts', async (page) => {
+export const fetchPosts = createAsyncThunk('home/fetchPosts', async () => {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   const data = await response.json();
   return data;
@@ -10,14 +10,14 @@ export const homeSlice = createSlice({
   name: 'posts',
   initialState: {
     posts: null,
-    nextPage: 1,
-    totalPages: 2,
     fetchedDate: 0,
     status: 'idle',
     error: null,
   },
   reducers: {
-    //
+    deletePost: (state, action) => {
+      state.posts = state.posts.filter((post) => post.id !== action.payload);
+    },
   },
   extraReducers(builder) {
     builder
@@ -30,7 +30,6 @@ export const homeSlice = createSlice({
           state.posts = action.payload;
         }
 
-        state.nextPage += 1;
         state.fetchedDate = Date.now();
       })
       .addCase(fetchPosts.rejected, (state, action) => {
@@ -40,6 +39,6 @@ export const homeSlice = createSlice({
   },
 });
 
-// export const {  } = homeSlice.actions;
+export const { deletePost } = homeSlice.actions;
 
 export default homeSlice.reducer;

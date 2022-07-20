@@ -7,7 +7,7 @@ const Header = ({ setSearchValue }) => {
     <header className={style.header}>
       <NavLink to='/' className={style.link}>
         <div className={style.logo}>
-          <SVG id='home' extra='homeHover' />
+          <SVG id='home' extraClass='homeHover' />
         </div>
       </NavLink>
       <div className={style.wrapper}>

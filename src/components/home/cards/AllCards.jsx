@@ -1,7 +1,7 @@
-import style from './AllPosts.module.css';
-import Post from './post/Post';
+import style from './AllCards.module.css';
+import Card from './card/Card';
 
-const AllPosts = ({ searchValue, people }) => {
+const AllPosts = ({ searchValue, posts, users }) => {
   const filterFunc = (find, ...rules) => {
     if (
       rules.some((arg) => {
@@ -13,20 +13,20 @@ const AllPosts = ({ searchValue, people }) => {
   };
 
   const filtered =
-    people &&
-    people.filter((person) => {
+    posts &&
+    posts.filter((post) => {
       if (!searchValue) {
-        return person;
+        return post;
       } else {
-        return filterFunc(person, person.first_name, person.last_name, person.profession);
+        return filterFunc(post, post.title, post.body);
       }
     });
 
   return (
     <main className={style.posts}>
-      {people &&
+      {posts &&
         (filtered.length > 0 ? (
-          filtered.map((person) => <Post key={person.id} post={person} />)
+          filtered.map((post) => <Card users={users} key={post.id} card={post} />)
         ) : (
           <div className={style.notFound}>No results found.</div>
         ))}
